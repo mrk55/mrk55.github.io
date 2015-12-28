@@ -1,7 +1,7 @@
 permalink: /:year-:month-:day/:title/
 
 highlighter: pygments
-markdown: mrkingi
+markdown: mrkangi
 redcarpet:
   extensions: [
    "no_intra_emphasis"
@@ -37,8 +37,8 @@ disqus_shortname: "mrkangi"
 
 
 
-url: "http://mrkingi.github.io"
-imgrepo: "http://mrkingi.github.io/static/img"
+url: "http://mrkangi.github.io"
+imgrepo: "http://mrkangi.github.io/static/img"
 #url: "http://127.0.0.1:4000"
 #imgrepo: "http://127.0.0.1:4000/static/img"
 

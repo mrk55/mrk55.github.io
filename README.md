@@ -1,5 +1,5 @@
 
 # Blog Address
 
-<http://mrkingi.github.io/>
+<http://mrkangi.github.io/>
 
