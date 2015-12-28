@@ -1,7 +1,7 @@
 permalink: /:year-:month-:day/:title/
 
 highlighter: pygments
-markdown: redcarpet
+markdown: mrkingi
 redcarpet:
   extensions: [
    "no_intra_emphasis"
@@ -28,17 +28,17 @@ baseurl: ""
 
 
 
-title: "RainyAlley"
-email: "dubuyuye@yeah.net"
+title: "Mrkangi"
+email: "mr.kang.jk@outlook.com"
 description: "Developer"
-github_username:  "dubuyuye"
-swiftype_searchId: "ncwR9a8S9CTx2q9SgsJm"
-disqus_shortname: "rainyalley"
+github_username:  "mrkangi"
+swiftype_searchId: "DMxGuBawVmsLTqzBE1Ck"
+disqus_shortname: "mrkangi"
 
 
 
-url: "http://blog.rainyalley.com"
-imgrepo: "http://blog.rainyalley.com/static/img"
+url: "http://mrkingi.github.io"
+imgrepo: "http://mrkingi.github.io/static/img"
 #url: "http://127.0.0.1:4000"
 #imgrepo: "http://127.0.0.1:4000/static/img"
 
