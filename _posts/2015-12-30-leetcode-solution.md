@@ -71,8 +71,9 @@ int CoinChange(int[] coins, int amount)
 
 以上0表示灯亮，1表示灯灭。
 
-令t表示结果中亮灯的个数，可以看到，以上`n=3,8,15`的示例中`1`的个数为$2\sum_{i=1}^t = 2\frac{(1+t)t}{2} = t(t+1)$，`0`的个数为$t$，
-所以总数为$t(t+1)+t=t(t+2)$。当n满足$(t-1)(t-1+2)<n<=t(t+2) => t^2-1<n<=t(t+2)$时，t的值就是当前的亮灯的数量。
+令t表示结果中亮灯的个数，可以看到，以上`n=3,8,15`的示例中`1`的个数为
+![equ1] [equ1]，`0`的个数为t，
+所以总数为t(t+1)+t=t(t+2)。当n满足![equ2] [equ2]时，t的值就是当前的亮灯的数量。
 
 程序如下：
 {% highlight csharp linenos %}
@@ -86,3 +87,6 @@ int BulbSwitcher(int n)
     return 0;
 }
 {% endhighlight %}
+
+[equ1]:  {{"/equ1.gif" | prepend: site.imgrepo }}
+[equ2]:  {{"/equ2.gif" | prepend: site.imgrepo }}
