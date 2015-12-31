@@ -5,6 +5,8 @@ tags: leetcode algorithm
 categories: algorithm
 ---
 
+`声明:本博客内容均为作者原创，版权所有，转载请注明出处`
+
 ###**322. Coin Change**
 题目的信息在[这里](http://mrkangi.github.io/2015-12-29/leetcode/#problem-322-coin-change)
 
@@ -90,6 +92,8 @@ int BulbSwitcher(int n)
     return 0;
 }
 {% endhighlight %}
+
+> **未完待续**
 
 [equ1]:  {{"/equ1.gif" | prepend: site.imgrepo }}
 [equ2]:  {{"/equ2.gif" | prepend: site.imgrepo }}
