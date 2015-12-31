@@ -84,10 +84,10 @@ int CoinChange(int[] coins, int amount)
 {% highlight csharp linenos %}
 int BulbSwitcher(int n)
 {
-    for (int i = 0; i <= n / 2 + 1; i++)//i的判断条件稍显多余，此处可以对i的初值优化
+    for (int t = 0; t <= n / 2 + 1; t++)//t的判断条件稍显多余，此处可以对t的初值优化
     {
-        if (i * i - 1 < n && n <= i * (i + 2))
-            return i;
+        if (t * t - 1 < n && n <= t * (t + 2))
+            return t;
     }
     return 0;
 }
