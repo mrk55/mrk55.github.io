@@ -5,7 +5,7 @@ tags: leetcode algorithm
 categories: algorithm
 ---
 
-####322. Coin Change
+###**322. Coin Change**
 题目的信息在[这里](http://mrkangi.github.io/2015-12-29/leetcode/#problem-322-coin-change)
 
 看完题目，首先想到的是用“**动态规划**”解决，“**回溯法**”应该也是可以的。我的解法用了**带备忘录的自底向上的非递归动态规划算法**，该方法在**《算法导论》**里有介绍。
@@ -35,14 +35,17 @@ int CoinChange(int[] coins, int amount)
 }
 {% endhighlight %}
 
-####321. Create Maximum Number
+###**321. Create Maximum Number**
 题目的信息在[这里](http://mrkangi.github.io/2015-12-29/leetcode/#problem-321-create-maximum-number)
 
 此题考虑用“**分支限界法**”，搜索解空间树，找出符合条件的解，然后求出最优解。
 
 > 算法的实现过两天更新。
 
-####319. Bulb Switcher
+###**319. Bulb Switcher**
+
+`2015-12-31 更新`
+
 题目的信息在[这里](http://mrkangi.github.io/2015-12-29/leetcode/#problem-319-bulb-switcher)
 
 此题有直观方法可解，但是效率较低。仔细观察后发现是有规律的。
