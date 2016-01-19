@@ -5,7 +5,7 @@ tags: leetcode algorithm
 categories: algorithm
 ---
 
-`声明:本博客内容均为作者原创，版权所有，转载请注明出处`
+`声明:本博文内容均为作者原创，版权所有，转载请注明出处`
 
 ###**322. Coin Change**
 题目的信息在[这里](http://mrkangi.github.io/2015-12-29/leetcode/#problem-322-coin-change)
@@ -92,6 +92,62 @@ int BulbSwitcher(int n)
     return 0;
 }
 {% endhighlight %}
+
+###**318. Maximum Product of Word Lengths**
+
+`2016-01-19 更新`
+
+题目的信息在[这里](http://mrkangi.github.io/2015-12-29/leetcode/#problem-318-maximum-product-of-word-lengths)
+
+此题也是可以暴力解决的，但是效率比较低。分析题目后可以发现，如果能够对每个`word`通过某种hash函数求出其hash值，
+通过此值来判断两个`word`之间是否包含公共字符，将提高不少效率。
+
+**算法思路**
+
+我采用的hash函数的算法如下：`[a-z]`这26个字母分别代表32位无符号整形的 低1~低26 位，当`word`中包含`[a-z]`中的某个字符时，
+相应的二进制位为`1`，例如：`"ab"`的hash值为`3`，即`00000000 00000000 00000000 00000011B`。
+
+得到了hash值之后，接下来的工作就是对每两个hash值进行按位与运算，若结果为`0`，则相应的两个`word`没有公共字符，此时再寻找最大乘积。
+
+
+程序如下：
+{% highlight csharp linenos %}
+public int MaxProduct(string[] words)
+{
+    int result = 0, tmpLen = 0;
+    uint[] hashCodes = new uint[words.Length];
+    for (int i = 0; i < words.Length; i++)
+    {
+        hashCodes[i] = HashCode(words[i]);
+    }
+    for (int i = 0; i < hashCodes.Length - 1; i++)
+    {
+        for (int j = i + 1; j < hashCodes.Length; j++)
+        {
+            if ((hashCodes[i] & hashCodes[j]) == 0)//哈希值按位与为0，即没有公共字符
+            {
+                tmpLen = words[i].Length * words[j].Length;
+                result = tmpLen > result ? tmpLen : result;//得到长度乘积最大的值
+            }
+        }
+    }
+    return result;
+}
+//hash函数
+private uint HashCode(string s)
+{
+    uint code = 0, mask;
+    foreach (char c in s)
+    {
+        mask = 1;
+        mask <<= (int)(c - 'a');
+        code |= mask;
+    }
+    return code;
+}
+{% endhighlight %}
+
+在`LeetCode`上提交之后，发现效率还可以，不过应该还有可优化的地方。
 
 > **未完待续**
 
